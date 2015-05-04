@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CD Plan for Rails Project</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CD Plan for Rails Project</h1>
+					<!-- <h3>Advanced Ruby Expert Homework</h3> -->
+					<p>
+						<small>From <a href="https://github.com/Jeanne-WN">Wang Ni</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h3>Continous Delivery</h3>
+						<p>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 70%;padding-right: 10px;'>Test Automation</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 70%;padding-right: 10px;'>Revision Control</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 70%;padding-right: 10px;'>CI</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 70%;padding-right: 10px;'>IT Automation</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 70%;padding-right: 10px;'>One-click Deployment</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/rails-logo.png" width="200" style="background: inherit; border: none; box-shadow: none;"/>
+						<p>
+							<span class='fragment roll-in' style='padding-right: 10px;'>Ruby</span>
+							<span class='fragment roll-in' >MVC</span>
+						</p>
+					</section>
+					<section>
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th style='color: #42affa;border-color:white;'>Tool Options</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Test Automation</td>
+									<td>Rspec</td>
+								<tr>
+								<tr>
+									<td>Revision Control</td>
+									<td>Git, SVN</td>
+								<tr>
+								<tr>
+									<td>CI</td>
+									<td>Go, Snap, Jenkins, Bamboo, Travis</td>
+								<tr>
+								<tr>
+									<td>IT Automation</td>
+									<td>Ansible, Chef, Puppet, Shell Script</td>
+								<tr>
+								<tr>
+									<td>One-click Deployment</td>
+									<td>Capistrano, IT Automations</td>
+								<tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<img src="images/go-logo.png" width="300" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/go-plan.png" width="900" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+							<span style='color: #42affa;font-size: 70%;padding-right: 10px;text-decoration:line-through;font-style:italic;'>Test Automation</span>
+							<span style='color: #42affa;font-size: 70%;padding-right: 10px;text-decoration:line-through;font-style:italic;'>Revision Control</span>
+							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>CI</span>
+							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>IT Automation</span>
+							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>One-click Deployment</span>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Setup CI</h3>
+					</section>
+					<section>
+						<img src="images/go-ci.png" width="900" style="border: none; box-shadow: none;"/>
+						<p>
+							How Go CI works
+						</p>
+					</section>
+					<section>
+						<p>
+							What do we need for a Rails project CI ?
+						</p>
+						<ul style="font-size: 80%">
+								<li class='fragment roll-in' style="color:#42affa;">Go Server</li>
+								<li class='fragment roll-in' style="color:#42affa;">Go Agent(s)</li>
+								<li class='fragment roll-in' style="color:#42affa;">Go Agent requirement</li>
+								<li class='fragment roll-in' style="color:#42affa;">Necessary accesses for Go Agent</li>
+								<li class='fragment roll-in' style="color:#42affa;">Pipeline</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Keys
+						</p>
+					</section>
+					<section>
+						<p>
+							<span style='color:#42affa;'>Pipeline, Stage, Job, Task</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/go-pipeline.png" width="900" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/go-stage-job.png" width="300" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/go-tasks.png" width="900" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/go-definitions.png" width="900" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p>
+							Agent as <span style='color:#42affa;'>Resources</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/go-resource.png" width="700" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p>
+							<span style='color:#42affa;'>Environments</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/go-env.png" width="700" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p>
+							<span style='color:#42affa;'>Artifacts</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/go-artifacts-1.png" width="800" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/go-artifacts-2.png" width="300" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p>
+							Necessary <span style='color:#42affa;'>accesses</span> for Go Agent ?
+						</p>
+					</section>
+					<section>
+						<p>
+							Git
+						</p>
+					</section>
+					<section>
+						<p>
+							And ...
+						</p>
+					</section>
+					<section>
+						<img src="images/go-deploy.png" width="900" style="border: none; box-shadow: none;"/>
+						<p class='fragment roll-in'>One-click Deployment</p>
+					</section>
+					<section>
+						<p>
+							Tips
+						</p>
+					</section>
+					<section>
+						<p>
+							A <span style='color:#42affa;'>new</span> Git account for Go Agent(s)
+						</p>
+						I need to check why...
+					</section>
+					<section>
+						<p>
+							Go Agent requirements setup
+						</p>
+						<p style='color:#42affa; font-size: 90%;'>
+							IT Automation
+						</p>
+					</section>
+					<section>
+						<a href='http://www.go.cd'>http://www.go.cd</a>
+						<!-- <a href='http://www.go.cd/documentation/user/current/navigation'>http://www.go.cd/documentation/user/current/navigation</a> -->
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>IT Automation</h3>
+					</section>
+					<section>
+						<p>
+							What is it?
+						</p>
+					</section>
+					<section>
+						<p>
+							Things need to figure out before start
+						</p>
+						<ul style="font-size: 80%">
+							<li class='fragment roll-in' style="color:#42affa;">Linux Distribution</li>
+							<li class='fragment roll-in' style="color:#42affa;">Accesses</li>
+							<li class='fragment roll-in' style="color:#42affa;">Requirements</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Vagrant, Ansible
+						</p>
+					</section>
+					<section>
+						<p>
+							Tips
+						</p>
+					</section>
+					<section>
+						<p>
+							Package Repo
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>One-click Deployment</h3>
+					</section>
+				</section>
+
+				<section>
+					<h4>Thank you.</h4>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
