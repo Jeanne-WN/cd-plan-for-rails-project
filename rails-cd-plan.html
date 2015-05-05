@@ -41,7 +41,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>CD Plan for Rails Project</h1>
+					<h1>CD Plan</h1>
+					<h3>For a Rails Project</h3>
 					<!-- <h3>Advanced Ruby Expert Homework</h3> -->
 					<p>
 						<small>From <a href="https://github.com/Jeanne-WN">Wang Ni</a></small>
@@ -60,13 +61,6 @@
 						</p>
 					</section>
 					<section>
-						<img src="images/rails-logo.png" width="200" style="background: inherit; border: none; box-shadow: none;"/>
-						<p>
-							<span class='fragment roll-in' style='padding-right: 10px;'>Ruby</span>
-							<span class='fragment roll-in' >MVC</span>
-						</p>
-					</section>
-					<section>
 						<table>
 							<thead>
 								<tr>
@@ -77,7 +71,7 @@
 							<tbody>
 								<tr>
 									<td>Test Automation</td>
-									<td>Rspec</td>
+									<td>a lot ...</td>
 								<tr>
 								<tr>
 									<td>Revision Control</td>
@@ -99,9 +93,6 @@
 						</table>
 					</section>
 					<section>
-						<img src="images/go-logo.png" width="300" style="border: none; box-shadow: none;"/>
-					</section>
-					<section>
 						<img src="images/go-plan.png" width="900" style="border: none; box-shadow: none;"/>
 					</section>
 					<section>
@@ -110,6 +101,29 @@
 							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>CI</span>
 							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>IT Automation</span>
 							<span style='color: #42affa;font-size: 70%;padding-right: 10px;'>One-click Deployment</span>
+					</section>
+					<section>
+						<p>
+							招财猫
+						</p>
+						<p>
+							<a href="http://join.thoughtworkschina.com/">http://join.thoughtworkschina.com/</a>
+						</p>
+						<p style='padding-top: 100px;'>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 80%;padding-right: 10px;'>Git</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 80%;padding-right: 10px;'>Rails</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 80%;padding-right: 10px;'>Mysql</span>
+							<span class='fragment roll-in' style='color: #42affa;font-size: 80%;padding-right: 10px;'>Memcached</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/go-logo.png" width="300" style="border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/ansible-logo.png" width="200" style="background:none;border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<img src="images/capistrano-logo.png" width="300" style="background:none;border: none; box-shadow: none;"/>
 					</section>
 				</section>
 
@@ -125,19 +139,19 @@
 					</section>
 					<section>
 						<p>
-							What do we need for a Rails project CI ?
+							What do we need for setup a Go CI ?
 						</p>
 						<ul style="font-size: 80%">
 								<li class='fragment roll-in' style="color:#42affa;">Go Server</li>
 								<li class='fragment roll-in' style="color:#42affa;">Go Agent(s)</li>
-								<li class='fragment roll-in' style="color:#42affa;">Go Agent requirement</li>
+								<li class='fragment roll-in' style="color:#42affa;">Go Agent(s) preparation</li>
 								<li class='fragment roll-in' style="color:#42affa;">Necessary accesses for Go Agent</li>
 								<li class='fragment roll-in' style="color:#42affa;">Pipeline</li>
 						</ul>
 					</section>
 					<section>
 						<p>
-							Keys
+							Conceptions
 						</p>
 					</section>
 					<section>
@@ -216,7 +230,7 @@
 					</section>
 					<section>
 						<p>
-							Go Agent requirements setup
+							Go Agent(s) preparation
 						</p>
 						<p style='color:#42affa; font-size: 90%;'>
 							IT Automation
@@ -249,18 +263,82 @@
 						</ul>
 					</section>
 					<section>
+						<ul style="font-size: 80%">
+							<li class='fragment roll-in' style="color:#42affa;">Ubuntu 12.04.5 LTS</li>
+							<li class='fragment roll-in' style="color:#42affa;">twer@10.17.7.18:22</li>
+							<li class='fragment roll-in' style="color:#42affa;">Ruby 2.1, Nginx, Memcached, Mysql 5.4, Git</li>
+						</ul>
+					</section>
+					<section>
 						<p>
-							Vagrant, Ansible
+							Steps ?
+						</p>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							<span style='color:#42affa;font-size: 120%'>Step 1: </span>Connect to machine
+						</p>
+						<p class='fragment roll-in' style='color: #42affa;font-size: 90%;'>SSH</p>
+					</section>
+					<section>
+						<p>
+							Things need to know about SSH
+						</p>
+						<ul style="font-size: 80%">
+							<li class='fragment roll-in' style="color:#42affa;">SSH key pair</li>
+							<li class='fragment roll-in' style="color:#42affa;">port</li>
+							<li class='fragment roll-in' style="color:#42affa;">known_hosts</li>
+							<li class='fragment roll-in' style="color:#42affa;">authorized_keys</li>
+							<li class='fragment roll-in' style="color:#42affa;">config</li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/ssh-config.png" width="500" style="background:none;border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							<span style='color:#42affa;font-size: 120%'>Step 2: </span>Install packages
+						</p>
+						<p class='fragment roll-in' style='color: #42affa;font-size: 80%;'>yum, apt-get, dpkg ...</p>
+					</section>
+					<section>
+						<p>
+							Authoriation - sudo ?
 						</p>
 					</section>
 					<section>
 						<p>
-							Tips
+							Package Repositories
 						</p>
 					</section>
 					<section>
+						<p style='font-size: 80%;'>
+							<span style='color:#42affa;font-size: 120%'>Step 3: </span>Configurations / Customization
+						</p>
+						<p class='fragment roll-in' style='color: #42affa;font-size: 80%;'>where? how?</p>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							/etc, /etc/init.d/, /opt, /usr, /var
+						</p>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							$PATH, ln, chmod, chown ...
+						</p>
+						<p class='fragment roll-in' style='color: #42affa;font-size: 80%;'>Copy Templates</p>
+					</section>
+					<section>
 						<p>
-							Package Repo
+							Don't forget <span style='color:#42affa;'>restart service</span>.
+						</p>
+					</section>
+					<section>
+						<img src="images/ansible-logo.png" width="200" style="background:none;border: none; box-shadow: none;"/>
+					</section>
+					<section>
+						<p>
+							<span style='color:#42affa;'>Be careful</span> when reusing existing resources
 						</p>
 					</section>
 				</section>
@@ -268,6 +346,110 @@
 				<section>
 					<section>
 						<h3>One-click Deployment</h3>
+					</section>
+					<section>
+						<p>
+							What is it?
+						</p>
+					</section>
+					<section>
+						<p>
+							Things need to figure out before start
+						</p>
+						<ul style="font-size: 80%">
+							<li  style="color:#42affa;">Linux Distribution</li>
+							<li  style="color:#42affa;">Accesses</li>
+							<li  style="color:#42affa;">Requirements</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Requirments
+						</p>
+						<ul style="font-size: 80%">
+							<li class='fragment roll-in' style="color:#42affa;">Nginx as HTTP Server</li>
+							<li class='fragment roll-in' style="color:#42affa;">Unicorn as App Server</li>
+							<li class='fragment roll-in' style="color:#42affa;">DB Migration</li>
+							<li class='fragment roll-in' style="color:#42affa;">0 Downtime</li>
+							<li class='fragment roll-in' style="color:#42affa;">Deploying to staging in every build</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Steps ?
+						</p>
+					</section>
+					<section>
+						<img src="images/capistrano-logo.png" width="250" style="background:none;border: none; box-shadow: none;"/>
+						<p>
+							<ul style="font-size: 70%;">
+								<li class='fragment roll-in'>SSH to Server</li>
+								<li class='fragment roll-in'>Pull code</li>
+								<li class='fragment roll-in'>Bundle install</li>
+								<li class='fragment roll-in'>Precompile assets</li>
+								<li class='fragment roll-in'>Migrate DB</li>
+								<li class='fragment roll-in'>Restart App Server</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<img src="images/cap-setup-1.png" width="550" style="background:none;border: none; box-shadow: none;"/>
+						<img src="images/cap-setup-3.png" width="400" style="background:none;border: none; box-shadow: none;"/>
+						<p style='font-size: 70%'>
+							Telling Capistrano what to do
+						</p>
+					</section>
+					<section>
+						<p>
+							But ...
+						</p>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							Necessary accesses:
+						</p>
+						<p>
+							<ul style="font-size: 70%;color:#42affa;">
+								<li class='fragment roll-in'>Go agent connects to Staging</li>
+								<li class='fragment roll-in'>Staging connects to Github</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<p style='font-size: 80%;'>
+							<span style='color:#42affa;font-size: 100%'>SSH agent forward: </span>ssh-agent, ssh-add
+						</p>
+					</section>
+					<section>
+						<p style='font-size: 70%;'>
+							1. Add go-agent's <span style='color:#42affa;'>ssh public key</span> to staging's <span style='color:#42affa;'>authorized_keys</span>
+						</p>
+					</section>
+					<section>
+						<img src="images/cap-setup-2.png" width="400" style="background:none;border: none; box-shadow: none;"/>
+						<p style='font-size: 60%;'>
+							2. Config Capistrano
+						</p>
+					</section>
+					<section>
+						<img src="images/cap-setup-4.png" width="400" style="background:none;border: none; box-shadow: none;"/>
+						<p style='font-size: 60%;'>
+							3. Create deploy.sh for CI
+						</p>
+					</section>
+					<section>
+						<p>
+							Others ...
+						</p>
+					</section>
+					<section>
+						<p>
+							<ul style="font-size: 70%;color:#42affa;">
+								<li>Init DB</li>
+								<li>Nginx configuration</li>
+								<li>Unicorn configuration</li>
+							</ul>
+						</p>
 					</section>
 				</section>
 
